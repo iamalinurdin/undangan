@@ -25,7 +25,7 @@ class InvitationRequest extends FormRequest
     {
 		return [
 			'name' => 'required',
-			'message' => 'required',
+			// 'message' => 'required',
 			'is_attend' => 'required'
 		];
     }

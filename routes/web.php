@@ -25,7 +25,11 @@ Route::get('/', function () {
 Route::post('confirm-attend', function (InvitationRequest $request) {
     $request->validated();
 
-    $values = $request->all();
+    $values = [
+        'name'      => $request->name,
+        'message'   => $request->message ?? '',
+        'is_attend' => $request->is_attend
+    ];
 
     Invitation::create($values);
 
