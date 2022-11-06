@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Requests\InvitationRequest;
 use App\Models\Invitation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,7 +22,9 @@ Route::get('/', function () {
     return view('welcome', compact('invitations'));
 });
 
-Route::post('confirm-attend', function (Request $request) {
+Route::post('confirm-attend', function (InvitationRequest $request) {
+    $request->validated();
+
     $values = $request->all();
 
     Invitation::create($values);

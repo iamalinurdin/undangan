@@ -84,17 +84,26 @@
                                 <form action="{{ route('confirm') }}" method="POST" class="mt-3">
                                     @csrf
                                     <div class="mb-3">
-                                        <input type="text" class="form-control border-dark main-color" name="name" placeholder="Nama Anda">
+                                        <input type="text" class="form-control border-dark main-color @error('name') is-invalid @enderror" name="name" placeholder="Nama Anda">
+                                        @error('name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                     <div class="mb-3">
-                                        <textarea class="form-control main-color border-dark" name="message" rows="3" placeholder="Berikan ucapan & doa"></textarea>
+                                        <textarea class="form-control main-color border-dark @error('message') is-invalid @enderror" name="message" rows="3" placeholder="Berikan ucapan & doa"></textarea>
+                                        @error('message')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                     <div class="mb-3">
-                                        <select class="form-select main-color border-dark" name="is_attend">
-                                            <option selected>Konfirmasi kehadiran</option>
+                                        <select class="form-select main-color border-dark @error('is_attend') is-invalid @enderror" name="is_attend">
+                                            <option selected disabled>Konfirmasi kehadiran</option>
                                             <option value="1">Hadir</option>
                                             <option value="0">Tidak Hadir</option>
                                         </select>
+                                        @error('is_attend')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                     <button type="submit" class="btn btn-transparent text-dark secondary-color border border-3 border-dark">
                                         Kirim
