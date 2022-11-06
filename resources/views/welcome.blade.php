@@ -40,7 +40,7 @@
 
         <div class="h-100">
             <div class="text-center">
-                <img src="{{ asset('photo.jpeg') }}" class="img-fluid">
+                <img src="{{ asset('photo-2.jpeg') }}" class="img-fluid">
             </div>
         </div>
 
@@ -53,13 +53,13 @@
                     <i class="fa-regular fa-calendar-days fa-xl"></i>
                 </div>
                 <h4 class="mt-2">Rabu,</h4>
-                <h5 class="mt-2">9 November 2022 pkl 18:00</h5>
+                <h5 class="mt-2">9 November 2022 pkl 18:30 wib</h5>
             </div>
             <div class="location">
                 <div class="icon">
                     <i class="fa-solid fa-map-location-dot fa-xl"></i>
                 </div>
-                <h4 class="fw-bold text-uppercase mt-2">rock dome depok</h4>
+                <h4 class="fw-bold text-uppercase mt-2">rock home depok</h4>
             </div>
 
             <div class="w-100 mx-auto">
@@ -140,7 +140,7 @@
         <footer class="main-color text-center">
             <span class="fw-bold">Powered by</span>
             <h5 class="fw-bold" style="color: #cc2663;">PT. TOBIAS DIGITAL INDONESIA</h5>
-            <img src="{{ asset('logo.png') }}" alt="">
+            <img src="{{ asset('logo.png') }}" width="150">
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     </body>
